@@ -1,5 +1,3 @@
-"use strict";
-
 const { addKeyword } = require("@bot-whatsapp/bot");
 
 //Class Agent
