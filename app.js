@@ -7,7 +7,7 @@ const BaileysProvider = require("@bot-whatsapp/provider/baileys");
 const MockAdapter = require("@bot-whatsapp/database/mock");
 
 //Port
-const PORT = process.env.PORT | 3000;
+const PORT = process.env.PORT;
 
 //flows
 const flowMain = require("./flows/main.flow");

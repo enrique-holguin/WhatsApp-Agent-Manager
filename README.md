@@ -26,6 +26,8 @@ Before running the WhatsApp Agent Management application and testing it, you wil
 
 3. **User Number:** Another phone number that will act as a user requesting assistance from an agent. You will use this number to test the bot's functionality.
 
+   <img width="450" src="https://i.imgur.com/QJ7BGYH.png">
+
 **Note:** The bot and user numbers must be different for testing purposes. You will need three distinct phone numbers to perform the demonstration.
 
 ## Getting Started
@@ -34,7 +36,7 @@ Before running the WhatsApp Agent Management application and testing it, you wil
 
 Before running the WhatsApp Agent Management application, make sure to set up your environment by following these steps:
 
-1. Duplicate the `.env.template` file and rename it to `.env`.
+1. Rename the`.env.template` to `.env`.
 
 2. Open the `.env` file and provide the necessary values:
 
@@ -68,7 +70,7 @@ Once you have the WhatsApp Agent Management application running, you can follow 
 
 2. You will see a page with a QR code displayed. This code is used to connect your bot.
 
-   <img width="250" src="https://i.imgur.com/kN7aIrR.png">
+   <img width="350" src="https://i.imgur.com/kN7aIrR.png">
 
 3. Open WhatsApp on your mobile device and tap on the three dots in the upper-right corner to open the menu. Select "WhatsApp Web."
 
