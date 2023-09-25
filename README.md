@@ -44,6 +44,33 @@ Before running the WhatsApp Agent Management application, make sure to set up yo
 
    - `PHONE_AGENT`: Enter the phone number of the agent who will respond to messages. Note that this is not the bot's phone number, and you will set it up later.
 
+## Docker
+
+<img width="350" src="https://upload.wikimedia.org/wikipedia/commons/7/79/Docker_%28container_engine%29_logo.png">
+
+You can run the WhatsApp Agent Management application using Docker for a containerized development environment. Make sure you have Docker and Docker Compose installed on your system.
+
+### Running with Docker Compose
+
+To start the application using Docker Compose, follow these steps:
+
+1. Ensure you're in the same directory as the `docker-compose.yml` file.
+
+2. Open a terminal and run the following command to start the application:
+
+   ```bash
+   docker-compose up -d
+   ```
+
+---
+
+## Nodejs
+
+<img width="250" src="
+https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png">
+
+For running the WhatsApp Agent Management application locally, follow these steps:
+
 ### Installation
 
 ```bash
@@ -55,6 +82,8 @@ npm install
 ```bash
 npm start
 ```
+
+---
 
 ## Scanning the QR Code
 
