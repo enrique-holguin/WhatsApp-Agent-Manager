@@ -8,6 +8,9 @@ const Agent = require("../class/Agent");
 //Keywords
 const { flowAdminKeyword } = require("../utils/keywords");
 
+//Options
+const adminOptions = require("../utils/adminOptions");
+
 const flowAdmin = addKeyword(flowAdminKeyword, { sensitive: true })
   .addAction(async (ctx, { flowDynamic, endFlow, globalState, provider }) => {
     const { from: phone } = ctx;
@@ -34,7 +37,7 @@ const flowAdmin = addKeyword(flowAdminKeyword, { sensitive: true })
         let agent = Agent.isAdmin(phone);
         const userStates = globalState.getMyState();
 
-        if (body.toLowerCase() === "inactivo") {
+        if (body.toLowerCase() === adminOptions.inactive) {
           agent.active = false;
           agent.queue.forEach(async (user) => {
             delete userStates[user.phone]; // Eliminar usuario del estado
@@ -53,7 +56,7 @@ const flowAdmin = addKeyword(flowAdminKeyword, { sensitive: true })
         let user = agent?.queue[0];
 
         console.log("El usuario -->", user);
-        if (body.toLowerCase() === "expulsar") {
+        if (body.toLowerCase() === adminOptions.expulse) {
           agent.queue.shift();
           delete userStates[user.phone]; // Eliminar usuario de la cola
           await provider.sendText(

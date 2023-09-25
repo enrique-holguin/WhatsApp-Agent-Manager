@@ -16,15 +16,14 @@ const flowMain = addKeyword(EVENTS.WELCOME)
   .addAction(async (ctx, { endFlow, provider, globalState }) => {
     try {
       const { from: phone, body } = ctx;
-      console.log("Entrando al flujo principal");
       const userStates = globalState.getMyState();
       console.log("UserStates -->", userStates);
       const state = userStates[phone];
       if (state) {
         const phoneAgent = state?.agent?.phone;
-        console.log("Numero de agente", phoneAgent);
+        console.log("agentNumber", phoneAgent);
         const idAgent = state?.agent?.id;
-        console.log("Id del agente", idAgent);
+        console.log("agentId", idAgent);
         const isActive = Agent.isUserActive(phoneAgent, phone);
         console.log(isActive);
         if (isActive) {
