@@ -5,6 +5,9 @@ const { addKeyword } = require("@bot-whatsapp/bot");
 //Class Agent
 const Agent = require("../class/Agent");
 
+//Keywords
+const { flowAdminKeyword } = require("../utils/keywords");
+
 const flowAdmin = addKeyword(flowAdminKeyword, { sensitive: true })
   .addAction(async (ctx, { flowDynamic, endFlow, globalState, provider }) => {
     const { from: phone } = ctx;

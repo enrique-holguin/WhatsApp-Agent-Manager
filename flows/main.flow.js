@@ -1,6 +1,6 @@
 "use strict";
 
-const { addKeyword } = require("@bot-whatsapp/bot");
+const { addKeyword, EVENTS } = require("@bot-whatsapp/bot");
 
 //Class Agent
 const Agent = require("../class/Agent");
@@ -56,3 +56,5 @@ const flowMain = addKeyword(EVENTS.WELCOME)
     },
     [flowAgent, flowAdmin]
   );
+
+module.exports = flowMain;
