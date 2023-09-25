@@ -2,4 +2,4 @@
 const flowAdminKeyword = "Admin";
 const flowAgentKeyword = `Agente`;
 
-module.exports = 
+module.exports = { flowAdminKeyword, flowAgentKeyword };
