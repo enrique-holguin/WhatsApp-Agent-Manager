@@ -1,3 +1,9 @@
+"use strict";
+const { addKeyword } = require("@bot-whatsapp/bot");
+
+//Class Agent
+const Agent = require("../class/Agent");
+
 const flowAgent = addKeyword(flowAgentKeyword, { sensitive: true })
   .addAction(async (ctx, { endFlow }) => {
     try {
@@ -42,3 +48,5 @@ const flowAgent = addKeyword(flowAgentKeyword, { sensitive: true })
       }
     }
   );
+
+module.exports = flowAgent;

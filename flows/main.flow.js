@@ -1,5 +1,17 @@
 "use strict";
 
+const { addKeyword } = require("@bot-whatsapp/bot");
+
+//Class Agent
+const Agent = require("../class/Agent");
+
+//Valid Options
+const validOptions = require("../utils/validOptions");
+
+//Flows
+const flowAdmin = require("./admin.flow");
+const flowAgent = require("./agent.flow");
+
 const flowMain = addKeyword(EVENTS.WELCOME)
   .addAction(async (ctx, { endFlow, provider, globalState }) => {
     try {

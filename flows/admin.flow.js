@@ -1,6 +1,13 @@
+"use strict";
+
+const { addKeyword } = require("@bot-whatsapp/bot");
+
+//Class Agent
+const Agent = require("../class/Agent");
+
 const flowAdmin = addKeyword(flowAdminKeyword, { sensitive: true })
   .addAction(async (ctx, { flowDynamic, endFlow, globalState, provider }) => {
-    const { key, from: phone } = ctx;
+    const { from: phone } = ctx;
     let agent = Agent.isAdmin(phone);
     if (!agent) {
       return endFlow(`Área solo para agentes/admins, acceso denegado`);
@@ -66,3 +73,5 @@ const flowAdmin = addKeyword(flowAdminKeyword, { sensitive: true })
       }
     }
   );
+
+module.exports = flowAdmin;
